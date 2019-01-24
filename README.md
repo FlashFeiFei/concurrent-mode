@@ -7,6 +7,8 @@
 
 
 *遍历无缓冲通道*
+
+```
 var court := make(chan int)
 
 for {
@@ -19,6 +21,8 @@ for {
     return
     }
 }
+
+```
 
 
 
@@ -33,6 +37,7 @@ for {
 
 *遍历有缓存通道*
 
+```
 var court := make(chan int)
 
 for {
@@ -48,3 +53,4 @@ for {
     return
     }
 }
+```
