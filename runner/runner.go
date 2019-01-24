@@ -20,6 +20,7 @@ type Runner struct {
 	complete chan error
 
 	// timeout 报告处理任务已经超时
+	//定义一个通道，这个通道只能是接收端
 	timeout <-chan time.Time
 
 	// tasks 持有一组以索引顺序依次执行的

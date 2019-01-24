@@ -54,3 +54,31 @@ for {
     }
 }
 ```
+
+
+# 通道类型
+通道提供了一种机制，用于 通过发送和 接收 指定元素类型的值来 同时执行通信 功能。未初始化频道的值是。 nil
+
+```
+ChannelType = ( "chan" | "chan" "<-" | "<-" "chan" ) ElementType .
+```
+
+可选<-运算符指定通道方向， 发送或接收。如果没有给出方向，则通道是 双向的。频道可能仅限于发送或仅通过转换或分配来接收 。
+
+```
+chan T //可用于发送和接收T类型的值
+chan < -  float64 //只能用于发送float64s
+<-chan int //只能用于接收整数
+
+```
+
+<-运算符与最左边的chan关联:
+
+```
+//这里看不懂，请大佬为我解答
+chan<- chan int    // same as chan<- (chan int)
+chan<- <-chan int  // same as chan<- (<-chan int)
+<-chan <-chan int  // same as <-chan (<-chan int)
+chan (<-chan int)
+
+```
