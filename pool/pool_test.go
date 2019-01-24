@@ -39,7 +39,7 @@ func createConnection() (io.Closer, error) {
 	return &dbConnection{id}, nil
 }
 
-func PoolTest(t *testing.T) {
+func TestPool(t *testing.T) {
 	var wg sync.WaitGroup
 	wg.Add(maxGoroutines)
 

@@ -26,7 +26,7 @@ func (m *namePrinter) Task() {
 	time.Sleep(time.Second)
 }
 
-func WorkTest(t *testing.T) {
+func TestWork(t *testing.T) {
 	//使用两个goroutine来创建工作池
 	p := New(2)
 	var wg sync.WaitGroup
